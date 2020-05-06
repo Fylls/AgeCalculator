@@ -1,15 +1,14 @@
-// these variable will be given by user
+// these variables will be given by user
 let inputYear;
 let inputMonth;
 let inputDay;
 
 // f() onclick "Reset" button
 function reset() {
-  const elements = ["seconds", "minutes", "hours", "days"];
-
-  elements.forEach((element) => {
-    document.getElementById(element).remove();
-  });
+  document.getElementById("seconds").remove();
+  document.getElementById("minutes").remove();
+  document.getElementById("hours").remove();
+  document.getElementById("days").remove();
 }
 
 // f() onclick "Calculate" button
@@ -24,31 +23,35 @@ function ageHandler() {
 
   const today = getToday();
   const birthday = getBirthday();
+  console.log(birthday);
+  console.log(today);
 
-  const seconds = (today.getTime() - birthday.getTime()) / 1000;
+  const secondsVal = (today.getTime() - birthday.getTime()) / 1000;
+  const minutesVal = secondsVal / 60;
+  const hoursVal = minutesVal / 60;
+  const daysVal = hoursVal / 24;
 
-  const timeValues = [
-    {
-      type: "seconds",
-      val: seconds,
-    },
-    {
-      type: "minutes",
-      val: seconds / 60,
-    },
-    {
-      type: "hours",
-      val: seconds / 3600,
-    },
-    {
-      type: "days",
-      val: seconds / 86400,
-    },
-  ];
+  const objS = {
+    type: "seconds",
+    val: secondsVal,
+  };
+  const objM = {
+    type: "minutes",
+    val: minutesVal,
+  };
+  const objH = {
+    type: "hours",
+    val: hoursVal,
+  };
+  const objD = {
+    type: "days",
+    val: daysVal,
+  };
 
-  timeValues.forEach((element) => {
-    domManipulation(element);
-  });
+  domManipulation(objS);
+  domManipulation(objM);
+  domManipulation(objH);
+  domManipulation(objD);
 }
 
 function getToday() {
