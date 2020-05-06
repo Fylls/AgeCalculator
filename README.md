@@ -1,2 +1,3 @@
-# AgeConverterCalculator
-bruh do you know how many seconds did you spent on this nihilistic rock floating through space? Neither do I.
+# AgeInDays
+challenge from this YTvideo, must watch!
+https://www.youtube.com/watch?v=Qqx_wzMmFeA&t=10218s
