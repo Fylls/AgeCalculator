@@ -3,43 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
   </head>
-
   <body>
-    <div class="container">
-      <div class="header">
-        <h1>Age Converter Calculator</h1>
-        <p>when was your birthday?</p>
-      </div>
+    <div class="container-1">
+      <h2>
+        Challenge 1: Your Age in Days
+      </h2>
 
-      <div class="button-container">
-        <div>
-          <button onclick="ageHandler()" class="btn btn-primary buttons">
-            Calculate
+      <div class="flex-box-container-1">
+        <div class="sas">
+          <button onclick="ageInDaysHandler()" class="btn btn-primary sas">
+            Click Me
           </button>
         </div>
 
-        <div>
-          <input type="date" id="myDate" style="text-align: center;" />
-        </div>
-
-        <div>
-          <button onclick="reset()" class="btn btn-danger buttons">
-            Reset
-          </button>
+        <div class="sas">
+          <button onclick="reset()" class="btn btn-danger sas">Reset</button>
         </div>
       </div>
-      <div class="textOutput">
-        <div id="secondsOutput"></div>
-        <div id="minutesOutput"></div>
-        <div id="hoursOutput"></div>
-        <div id="daysOutput"></div>
+
+      <div class="flex-box-container-1">
+        <div id="flex-box-result"></div>
       </div>
     </div>
 
