@@ -1,9 +1,9 @@
-// these variable will be given by user
+// these variables will be given by user
 let inputYear;
 let inputMonth;
 let inputDay;
 
-// f() onclick "Reset" button
+// f() onClick "Reset" button
 function reset() {
   const elements = ["seconds", "minutes", "hours", "days"];
 
@@ -15,8 +15,7 @@ function reset() {
 // f() onclick "Calculate" button
 function ageHandler() {
   try {
-    // resets previous input without
-    // breaking the whole code
+    // resets previous input without breaking the whole code
     reset();
   } catch (err) {
     console.log(err);
@@ -75,7 +74,7 @@ function separateTimeFactors(string) {
 function domManipulation(obj) {
   const p = document.createElement("p");
   const textAnswer = document.createTextNode(
-    "you are " + obj.val + " " + obj.type + " old"
+    "you are " + obj.val + " " + obj.type + " old" //`you are ${obj.val} ${obj.type} old`
   );
   p.setAttribute("id", obj.type);
   p.appendChild(textAnswer);
